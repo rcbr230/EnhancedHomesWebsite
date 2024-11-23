@@ -18,9 +18,10 @@
       text-align: center;
     }
     .section {
-      padding: 30px 20px;
+      padding-top: 30px;
+      padding-left: 30%;
     }
-    #topNavDiv{
+        #topNavDiv{
       background-color: #242424 !important;
     }
     .navbar-brand{
@@ -52,7 +53,13 @@
     }
     #contact-dropdown{
       display: none;
+      background-color: white;
+      position: absolute;
     }
+    #contact-dropdown:hover{
+      display:block;
+    }
+    #contactUsNav:hover + #contact-dropdown,
     #contactUsNav:hover #contact-dropdown{
       display: block;
     }
@@ -82,9 +89,11 @@
 
 		  <li class="nav-item">
             <a class="nav-link" href="#section4" id="contactUsNav">Contact Us 🡣</a>
-              <ul id="contact-dropdown">
-                <li><a href="#">Sell a house</a></li>
-              </ul>
+              <div id="contact-dropdown">
+                <ul class="navbar-nav ms-auto">
+                  <li><a class="nav-link" style="color:black" href="#">Sell a house</a></li>
+                </ul>
+              </div>
           </li>
           <p class="navbar-break" style="color: white;">|</p>
           <li class="nav-item">
@@ -106,67 +115,68 @@
       <p>Mini description here...</p>
     </div>
   </div>
-
+  <div class="mainBody">
   <!-- Sections -->
-  <div id="section1" class="section bg-light">
-    <div class="container">
-      <h2>Homes for Sale</h2>
-      <table id="HomesForSaleTable">
-        <!-- 
-        THIS WILL BE NEEDED IN THE FUTURE!
-        <script>
-          var table = document.getElementById("HomesForSaleTable");
-          for (var i=0;i<3;i++){
-            var tableRow = document.createElement("tr");
-            for (var j=0;j<3;j++){
-              // last element is for viewing more homes for sale
-              if(i==2 && j==2){
-                break;
+    <div id="section1" class="section bg-light">
+      <div class="container">
+        <h2>Homes for Sale</h2>
+        <table id="HomesForSaleTable">
+          <!-- 
+          THIS WILL BE NEEDED IN THE FUTURE!
+          <script>
+            var table = document.getElementById("HomesForSaleTable");
+            for (var i=0;i<3;i++){
+              var tableRow = document.createElement("tr");
+              for (var j=0;j<3;j++){
+                // last element is for viewing more homes for sale
+                if(i==2 && j==2){
+                  break;
+                }
+                //NOTE: This is a temporary fix! I am doing these TDs manually, but will
+                // have to create a DB to store all the house data.
+                var tableDataCell = document.createElement("td");
+                tableDataCell.innerHTML("<img src=./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg>");
+                tableRow.appendChild(tableDataCell);
               }
-              //NOTE: This is a temporary fix! I am doing these TDs manually, but will
-              // have to create a DB to store all the house data.
-              var tableDataCell = document.createElement("td");
-              tableDataCell.innerHTML("<img src=./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg>");
-              tableRow.appendChild(tableDataCell);
+              table.appendChild(tableRow);
             }
-            table.appendChild(tableRow);
-          }
-        </script> -->
-        <tr>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-        </tr>
-        <tr>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
-          <td class="HomesForSaleCell"><a><img class="hover-effect"src="https://media.istockphoto.com/id/688550958/vector/black-plus-sign-positive-symbol.jpg?s=612x612&w=0&k=20&c=0tymWBTSEqsnYYXWeWmJPxMotTGUwaGMGs6BMJvr7X4=" style="width: 150px;height: 150px;"></a></td>
-        </tr>
-      </table>
+          </script> -->
+          <tr>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          </tr>
+          <tr>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+            <td class="HomesForSaleCell"><a><img class="hover-effect"src="https://media.istockphoto.com/id/688550958/vector/black-plus-sign-positive-symbol.jpg?s=612x612&w=0&k=20&c=0tymWBTSEqsnYYXWeWmJPxMotTGUwaGMGs6BMJvr7X4=" style="width: 150px;height: 150px;"></a></td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </div>
 
-  <div id="section2" class="section">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <p>EX.</p>
+    <div id="section2" class="section">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p>EX.</p>
+      </div>
     </div>
-  </div>
 
-  <div id="section3" class="section bg-light">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>EX.</p>
+    <div id="section3" class="section bg-light">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>EX.</p>
+      </div>
     </div>
-  </div>
-  <div id="section4" class="section bg-light">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>EX.</p>
+    <div id="section4" class="section bg-light">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>EX.</p>
+      </div>
     </div>
   </div>
   <!-- Bootstrap JS -->
