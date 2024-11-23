@@ -18,21 +18,45 @@
       text-align: center;
     }
     .section {
-      padding: 90px 20px;
+      padding: 30px 20px;
     }
-	#topNavDiv{
-		background-color: #242424 !important;
-	}
-	.navbar-brand{
-		color: white;
-	}
-	.nav-link{
-		color: white;
-	}
-	.phoneNum{
-		margin-top: 7px;
-		color: #0093bf;
-  }
+    #topNavDiv{
+      background-color: #242424 !important;
+    }
+    .navbar-brand{
+      color: white;
+    }
+    .nav-link{
+      color: white;
+    }
+    .nav-link:hover{
+      color:red;
+    }
+    .navbar-break{
+      padding-top: 7px;
+    }
+    .phoneNum{
+      margin-top: 7px;
+      color: #0093bf;
+    }
+    .hover-effect {
+      transition: transform 0.3s ease; /* Smooth animation */
+    }
+
+    /* Happens when a mouse is hovered over the image */
+    .hover-effect:hover {
+      transform: scale(1.1); /* Slightly enlarge the image */
+    }
+    .HomesForSaleCell{
+      padding: 5px;
+    }
+    #contact-dropdown{
+      display: none;
+    }
+    #contactUsNav:hover #contact-dropdown{
+      display: block;
+    }
+    
   </style>
 </head>
 <body>
@@ -44,16 +68,27 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#section1">HOMES FOR SALE</a>
+            <a class="nav-link" href="#section1">Homes for Sale</a>
           </li>
+          <p class="navbar-break" style="color: white;">|</p>
           <li class="nav-item">
-            <a class="nav-link" href="#section2">PORTFOLIO</a>
+            <a class="nav-link" href="#section2">Portfolio</a>
           </li>
+          <p class="navbar-break" style="color: white;">|</p>
           <li class="nav-item">
-            <a class="nav-link" href="#section3">ABOUT US</a>
+            <a class="nav-link" href="#section3">About Us</a>
           </li>
+          <p class="navbar-break" style="color: white;">|</p>
+
 		  <li class="nav-item">
-            <a class="nav-link" href="#section4">CONTACT US</a>
+            <a class="nav-link" href="#section4" id="contactUsNav">Contact Us 🡣</a>
+              <ul id="contact-dropdown">
+                <li><a href="#">Sell a house</a></li>
+              </ul>
+          </li>
+          <p class="navbar-break" style="color: white;">|</p>
+          <li class="nav-item">
+            <a class="nav-link" href="">Upcoming Projects</a>
           </li>
 		  
 		  <li class="nav-item">
@@ -77,6 +112,8 @@
     <div class="container">
       <h2>Homes for Sale</h2>
       <table id="HomesForSaleTable">
+        <!-- 
+        THIS WILL BE NEEDED IN THE FUTURE!
         <script>
           var table = document.getElementById("HomesForSaleTable");
           for (var i=0;i<3;i++){
@@ -86,13 +123,29 @@
               if(i==2 && j==2){
                 break;
               }
-
+              //NOTE: This is a temporary fix! I am doing these TDs manually, but will
+              // have to create a DB to store all the house data.
               var tableDataCell = document.createElement("td");
-
+              tableDataCell.innerHTML("<img src=./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg>");
+              tableRow.appendChild(tableDataCell);
             }
+            table.appendChild(tableRow);
           }
-
-        </script>
+        </script> -->
+        <tr>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+        </tr>
+        <tr>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect" src="./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg" style="width: 150px;height: 150px;"></a></td>
+          <td class="HomesForSaleCell"><a><img class="hover-effect"src="https://media.istockphoto.com/id/688550958/vector/black-plus-sign-positive-symbol.jpg?s=612x612&w=0&k=20&c=0tymWBTSEqsnYYXWeWmJPxMotTGUwaGMGs6BMJvr7X4=" style="width: 150px;height: 150px;"></a></td>
+        </tr>
       </table>
     </div>
   </div>
