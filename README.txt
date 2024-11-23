@@ -2,8 +2,7 @@ Portfolio website
 
 - allow contacting 
 	- Selling
-	- 
-- 
+	- one other IDR
 
 
 
@@ -14,14 +13,21 @@ Home page - Homes for sale - Portfolio - About - Contact
 
 Home Page:
 - Allow a user to scroll through and see everything important
-- Provides info on: Homes for sale, Portfolio, About Us, Contact Us
+- Provides info on: Homes for sale, Portfolio basics, About Us, Contact Us
 
 Homes for sale:
-- Display first 9 homes that are avalible for purchase
+- Display first ~8 homes that are avalible for purchase, then 9th option is to see more
 
-CONTACT US:
-- Use API to contact => EmailJS
+Portfolio:
+- Similar to homes for sale, but with sold homes instead.
+
+About Us:
+- General info about the company
+
+Contact Us:
+- Have to use backend
 
 Admin:
 - Can add and remove homes, or change them to be sold/listed/new
+- REQUIRES a back-end
 
