@@ -67,7 +67,7 @@
   <!-- Hero Section -->
   <div class="hero">
     <div class="container">
-      <img src="./SiteImages/Logo.png">
+      <img src="./SiteImages/Logo.png" style="width:550px;height:100px;">
       <p>Mini description here...</p>
     </div>
   </div>
@@ -76,7 +76,24 @@
   <div id="section1" class="section bg-light">
     <div class="container">
       <h2>Homes for Sale</h2>
-      <p>EX.</p>
+      <table id="HomesForSaleTable">
+        <script>
+          var table = document.getElementById("HomesForSaleTable");
+          for (var i=0;i<3;i++){
+            var tableRow = document.createElement("tr");
+            for (var j=0;j<3;j++){
+              // last element is for viewing more homes for sale
+              if(i==2 && j==2){
+                break;
+              }
+
+              var tableDataCell = document.createElement("td");
+
+            }
+          }
+
+        </script>
+      </table>
     </div>
   </div>
 
