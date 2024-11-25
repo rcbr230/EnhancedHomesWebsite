@@ -11,32 +11,37 @@
   <style>
     body {
       scroll-behavior: smooth;
+      overflow-x: hidden;
+      
     }
     .hero {
       background-color: #e0e0e0;
       /* padding: 100px 0; */
       padding-bottom: 10px;
+      padding-top: 10px;
       text-align: center;
     }
     .section {
       padding-top: 30px;
-      /* padding-left: 30%;
-      padding-right: 30%; */
+      padding-left:  25%;
+      padding-right: 20%;
     }
-        #topNavDiv{
-      background-color: #242424 !important;
+    #topNavDiv{
+      background-color: #101010 !important;
     }
     .navbar-brand{
       color: white;
     }
     .navbar-brand:hover{
       color:red;
+      text-decoration: underline;
     }
     .nav-link{
       color: white;
     }
     .nav-link:hover{
       color:red;
+      text-decoration: underline;
     }
     .navbar-break{
       padding-top: 7px;
@@ -45,15 +50,20 @@
       margin-top: 7px;
       color: #0093bf;
     }
+    /* NOTE: THIS ONLY WORKS WHEN ALL THE IMAGES ARE THE SAME SIZE! */
     .hover-effect {
       transition: transform 0.3s ease; /* Smooth animation */
+      width:  100%;
+      height: 100%;
     }
 
+    .homes-for-sale-table{
+    }
     /* Happens when a mouse is hovered over the image */
     .hover-effect:hover {
       transform: scale(1.1); /* Slightly enlarge the image */
     }
-    .HomesForSaleCell{
+    .homes-for-sale-cell{
       padding: 5px;
     }
     #contact-dropdown{
@@ -71,9 +81,33 @@
     
     .scroll-img{
       width: 100%;
-      height: 10%;
+      overflow: hidden;
+    }
+    .sale-portfolio-break-div{
+      width: 100%;
+      padding-top: 50px;
+      height:5%;
+    }
+    .sale-portfolio-break-img{
+      height: 150px;
+      width:100%;
+    }
+
+    .about-us-paragraph{
+      width:65%;
+      float: left;
+    }
+    .clear{
+      clear: both;
+    }
+    .meet-makers-link{
+      padding-left: 50px;
+      text-decoration: none;
     }
     
+    .section-contact{
+      background-color: #101010;
+    }
   </style>
 </head>
 <body>
@@ -101,7 +135,7 @@
             <a class='nav-link' href='#section4' id='contactUsNav'>Contact Us 🡣</a>
               <div id='contact-dropdown'>
                 <ul class='navbar-nav ms-auto'>
-                  <li><a class='nav-link' style='color:black' href='#'>Sell a house</a></li>
+                  <li><a class='nav-link' style='color:black' href='/ContactUs'>Sell a house</a></li>
                 </ul>
               </div>
           </li>
@@ -164,7 +198,7 @@
     <div id='section' class='section bg-light'>
       <div class='container'>
         <h2>Homes for Sale</h2>
-        <table id='HomesForSaleTable'>
+        <table id='homes-for-sale-table'>
           <!-- 
           THIS WILL BE NEEDED IN THE FUTURE!
           <script>
@@ -188,21 +222,27 @@
 
           <!-- TEMPORARY EXAMPLE TABLE: -->
           <tr>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
           </tr>
           <tr></tr>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg' style='width: 250px;height: 250px;'></a></td>
-            <td class='HomesForSaleCell'><a><img class='hover-effect'src='https://media.istockphoto.com/id/688550958/vector/black-plus-sign-positive-symbol.jpg?s=612x612&w=0&k=20&c=0tymWBTSEqsnYYXWeWmJPxMotTGUwaGMGs6BMJvr7X4=' style='width: 250px;height: 250px;'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
           </tr>
         </table>
       </div>
+    </div>
+
+    <!-- Middle Image between Homes for sale and Portfolio examples -->
+    <div class='sale-portfolio-break-div'>
+
+      <img class='sale-portfolio-break-img' src='https://media.istockphoto.com/id/1372488781/vector/wood-texture-vector-brown-wooden-background.jpg?s=612x612&w=0&k=20&c=eXQbrqxBXe4VvXXDFXNv0rsDNMUqvXzWJRi7GTYUWXM='>
+
     </div>
     <div id='section2'></br></br></div>
     <div id='section' class='section'>
@@ -215,14 +255,25 @@
     <div id='section' class='section bg-light'>
       <div class='container'>
         <h2>About Us</h2>
-        <p>EX.</p>
+        <!-- ex written by GPT -->
+        <div >
+          <p class='about-us-paragraph'>An “About Me” section serves as a personal introduction, offering readers a glimpse into who you are, your background, and what drives you. It's more than just a biography; it's a chance to communicate your values, skills, and personality in a way that resonates with your audience. Whether it's for a professional portfolio, a social media profile, or a casual personal website, this space is a unique opportunity to establish a connection by showcasing your individuality. For professionals, it often includes details about your career journey, achievements, and aspirations, demonstrating expertise and building credibility. For creatives, it might delve into passions, inspirations, or unique quirks that define your perspective. While the tone and content can vary depending on the context, the ultimate goal of an "About Me" section is to engage readers, answer their unspoken questions about who you are and what you offer, and leave a lasting impression that invites further interaction.</p>
+          <img class='about-us-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEM7h-3_xucDg6PXVOyOxh9QOnMkS0dvydRA&s'>
+          </br>
+          </br>
+          <a class='meet-makers-link' href='/MeetUs'><b>Meet the Makers &#62;&#62;</b></a>
+          <div class='clear'></div>
+          <p> PROBABLY MORE HERE? BUT WITH IMAGE ON THE LEFT</p>
+        </div>
       </div>
     </div>
    <div id='section4'></br></br></div>
-    <div id='section' class='section bg-light'>
+    <div id='section-contact' class='section bg-light'>
       <div class='container'>
         <h2>Contact Us</h2>
-        <p>EX.</p>
+        <div class='contact-us-section'>
+            <p>EX.</p>
+        </div>
       </div>
     </div>
   </div>
