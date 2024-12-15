@@ -81,6 +81,8 @@
     
     .scroll-img{
       width: 100%;
+      height: 700px;
+      object-fit: cover;
       overflow: hidden;
     }
     .sale-portfolio-break-div{
@@ -188,7 +190,7 @@
       </script>
       
     <div class='container' id='header-container'>
-      <img src='./SiteImages/Logo.png' style='width:40%;height:10%;'>
+      <img src='./SiteImages/Logo.png' style='width:40%;height:10%;margin-top:20px;'>
       <p>Mini description here...</p>
     </div>
   </div>
@@ -220,7 +222,7 @@
             }
           </script> -->
 
-          <!-- TEMPORARY EXAMPLE TABLE: -->
+          <!-- TEMPORARY EXAMPLE TABLE CHANGE TO PHP TO GRAB FROM DB LATER: -->
           <tr>
             <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
             <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
@@ -248,7 +250,43 @@
     <div id='section' class='section'>
       <div class='container'>
         <h2>Portfolio</h2>
-        <p>EX.</p>
+        <table id='homes-for-sale-table'>
+          <!-- 
+          THIS WILL BE NEEDED IN THE FUTURE!
+          <script>
+            var table = document.getElementById('HomesForSaleTable');
+            for (var i=0;i<3;i++){
+              var tableRow = document.createElement('tr');
+              for (var j=0;j<3;j++){
+                // last element is for viewing more homes for sale
+                if(i==2 && j==2){
+                  break;
+                }
+                //NOTE: This is a temporary fix! I am doing these TDs manually, but will
+                // have to create a DB to store all the house data.
+                var tableDataCell = document.createElement('td');
+                tableDataCell.innerHTML('<img src=./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg>');
+                tableRow.appendChild(tableDataCell);
+              }
+              table.appendChild(tableRow);
+            }
+          </script> -->
+
+          <!-- TEMPORARY EXAMPLE TABLE CHANGE TO PHP TO GRAB FROM DB LATER: -->
+          <tr>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+          </tr>
+          <tr></tr>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+            <td class='homes-for-sale-cell'><a><img class='hover-effect' src='./Homes/Listed/777_Haven_st/HouseImages/tempHouseEx.jpg'></a></td>
+          </tr>
+        </table>
       </div>
     </div>
     <div id='section3'></br></br></div>
@@ -261,7 +299,7 @@
           <img class='about-us-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEM7h-3_xucDg6PXVOyOxh9QOnMkS0dvydRA&s'>
           </br>
           </br>
-          <a class='meet-makers-link' href='/MeetUs'><b>Meet the Makers &#62;&#62;</b></a>
+          <a class='meet-makers-link' href='/MeetUs'><b>This will be an img LATER &#62;&#62;</b></a>
           <div class='clear'></div>
           <p> PROBABLY MORE HERE? BUT WITH IMAGE ON THE LEFT</p>
         </div>
