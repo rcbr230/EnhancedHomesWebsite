@@ -1,0 +1,31 @@
+<style>
+    body{
+        text-align: center;
+    }
+    .prompt-area{
+        text-align: center;
+        margin-right: 30%;
+        margin-left: 30%;
+        margin-top: 5%;
+        border: 1px solid black;
+        padding: 15px;
+    }
+</style>
+<title>Enhanced Homes Admin</title>
+<body>
+    <h2>Enhanced Homes Admin Page</h2>
+    <div class="prompt-area">
+    <form action="login.php" method="POST">
+        <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+        <label for="remove-add">Function:</label>
+            <select name="remove-add" id="remove-add">
+                <option value="add">Add a house</option>
+                <option value="remove">Remove a house</option>
+            </select>
+        <input type="submit" value="Login">
+    </form>
+    </div>
+</body>

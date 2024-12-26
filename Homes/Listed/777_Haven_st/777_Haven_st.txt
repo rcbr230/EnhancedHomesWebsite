@@ -1,8 +1,0 @@
-Street Address: ---
-State: --
-Zip: -----
-Neighborhood: ---
-Cost: ---
-Beds: --
-Baths: {full: -- half: -- }
-Approx Sq Ft: -----
