@@ -1,0 +1,270 @@
+
+<html>
+<style>
+html {
+    scroll-behavior: smooth;
+	}
+@font-face{
+		font-family: Galvanizer;
+		src: url(./fonts/Galvanizer-Regular.tff) format('tff');
+}
+p{
+    font-family: Galvanizer, sans-serif;
+    
+}
+a{
+	font-family: Galvanizer, sans-serif;
+}
+
+
+
+
+/* NAV BAR CSS */
+.top-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 13%;
+    border-bottom: 1px black solid;
+    z-index: 200;
+	display: inline;
+}
+.home-button{
+    width: 30%;
+}
+.navbar-link{
+    margin: 2%;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+}
+.navbar-link:hover{
+    color: #d21701;
+}
+.navbar-link-img{
+    vertical-align: middle;
+}
+#about-hover{
+	position: relative;
+}
+#about-hover:hover + .about-dropdown{
+	display: inline-block;
+}
+.about-dropdown:hover{
+	display: inline-block;
+}
+.about-dropdown{
+	display: none;	
+	position: absolute;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	left: 10%;
+	top: 90%;
+	text-align: left;
+	padding: 10px;
+}
+.about-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.about-dropdown a:hover{
+	color: #d21701;
+}
+.about-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+#services-hover{
+	position: relative;
+}
+#services-hover:hover + .services-dropdown{
+	display: inline-block;
+}
+.services-dropdown:hover{
+	display: inline-block;
+}
+.services-dropdown{
+	display: none;	
+	position: absolute;
+	left: 10%;
+	top: 90%;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	text-align: left;
+	padding: 10px;
+}
+.services-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.services-dropdown a:hover{
+	color: #d21701;
+}
+.service-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+
+
+
+
+
+
+
+/* filler */
+.fancy-filler{
+	height: 13%;
+	background-color: #800000;
+	outline: 3px solid white;
+	outline-offset: -10px;
+	position: relative;
+}
+.custom-homes-title{
+	position: relative;
+	top: 20%;
+	left: 3%;
+	font-size: 60;
+	color: white;
+	font-family: sans-serif;
+	
+}
+
+
+
+/* HEADER */
+.header{
+	padding-left: 7%;
+	padding-top: 3%;
+	position: relative;
+}
+.header-img{
+	width: 60%;
+	margin-left: 30%;
+}
+.header-text{
+	position: absolute;
+	z-index: 10;
+	left: 32%;
+	top: 76%;
+	padding: 10px;
+	background-color: white;
+	outline: black 2px solid;
+	width: 35%;
+	filter: drop-shadow(5px 5px 5px black);
+}
+.header-text h2{
+	font-family: sans-serif;
+}
+.header-text p{
+	font-family: sans-serif;
+}
+
+
+/* BODY TEXT */
+.body-text{
+	padding-left: 20%;
+	padding-right: 20%;
+}
+.body-text p{
+	font-family: sans-serif;
+	font-size: large;
+}
+.q-text{
+	padding-left: 25px;
+}
+.ans-text{
+	padding-left: 75px;	
+}
+</style>
+<body>
+<!-- navbar at the top of the website -->
+<div class="top-navbar">
+	<a class="navbar-link-img" href="https://reece-brogden.com/EnhancedHomes/#"><img class="home-button" src="/EnhancedHomes/SiteImages/Logo.png"></a>
+	<div class="service-div">
+		<a class="navbar-link" id="services-hover" href="https://reece-brogden.com/EnhancedHomes/#services">SERVICES&#8675;</a>
+		<div class="services-dropdown">
+			</br>
+			<a href="/EnhancedHomes/CustomHomes">Custom Homes</a>
+			</br></br>
+			<a href="/EnhancedHomes/Renovations">Renovation Additions</a>
+			</br></br>
+		</div>
+	</div>
+<a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Gallery">PORTFOLIO</a>
+<a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Homes-For-Sale">HOMES FOR SALE</a>
+<div class="about-div">
+	<a class="navbar-link" id="about-hover" href="https://reece-brogden.com/EnhancedHomes/About">ABOUT US&#8675;</a>
+	<div class="about-dropdown">
+		</br>
+		<a href="/EnhancedHomes/About">Meet the Owner</a>
+		</br></br>
+		<a href="/EnhancedHomes/FAQ">FAQ</a>
+		</br></br>
+	</div>
+</div>
+<a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/#contact-us">CONTACT US</a>
+</div>
+
+
+	<!-- Filler -->
+	<div style="height: 6%;"></div>
+
+
+	<!-- Fancy Filler -->
+	<div class="fancy-filler">
+		<p class="custom-homes-title">CUSTOM HOMES</p>
+	</div>
+
+
+	<!-- HEADER -->
+	<div class="header">
+		<img class="header-img" src="/EnhancedHomes/SiteImages/RenovationAndAdditionsHeader.png"/>
+		<div class="header-text">
+			<h2>Renovations and Additions</h2>
+			<p>
+				At Enhanced Homes, we specialize in transforming your existing space into something new
+				and beautiful. Whether you are looking to add more space, update a room, or completely
+				overhaul your home, we work with you tob bring your vision to life. 
+			</p>
+		</div>
+	</div>
+
+
+
+
+	<!-- BODY TEXT -->
+	 <div class="body-text">
+		<p><b>Our Renovations Process:</b></p>
+		<p class="q-text"><b>&#x2022; Custom Planning:</b></p>
+		<p class="ans-text">
+			We begin by understanding the scope of your project. Give us a call and we will discuss your idea and goals.
+			Based on your needs, we may involve an architect to ensure that your renovation meets all requirements and 
+			maximizes the potential of your space.	
+		</p>
+		<p class="q-text"><b>&#x2022; Design and Execution:</b></p>
+		<p class="ans-text">
+			Whether you are updating a kitchen, adding an extension, or revamping your entire home, we create a detailed 
+			plan. We will handle everything from design to construction, ensuring a seamless process and high-quality results.
+		</p>
+		<p class="q-text"><b>&#x2022; Personalized Approach:</b></p>
+		<p class="ans-text">
+			We believe in being flexible and responsive. Each renovation is unique, and we tailor our approach to suit the specific needs of your home and budget
+		</p>
+		<p class="q-text"><b>&#x2022; Ongoing Communication:</b></p>
+		<p class="ans-text">
+			From the initial consultation to project completion, we stay in close contact, keeping you updated and involved throughout the renovation process
+		</p>
+	 </div>
+</body>
+</html>

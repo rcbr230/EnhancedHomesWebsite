@@ -1,0 +1,278 @@
+<html>
+	<head>
+<style>
+    html {
+    scroll-behavior: smooth;
+	}
+	@font-face{
+		font-family: Galvanizer;
+		src: url(./fonts/Galvanizer-Regular.tff) format('tff');
+	}
+p{
+    font-family: Galvanizer, sans-serif;
+    
+}
+a{
+	font-family: Galvanizer, sans-serif;
+}
+/* NAV BAR CSS */
+.top-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 13%;
+    border-bottom: 1px black solid;
+    z-index: 200;
+	display: inline;
+}
+.home-button{
+    width: 30%;
+}
+.navbar-link{
+	margin: 2%; 
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+}
+.navbar-link:hover{
+    color: #d21701;
+}
+.navbar-link-img{
+    vertical-align: middle;
+}
+#about-hover{
+	position: relative;
+}
+#about-hover:hover + .about-dropdown{
+	display: inline-block;
+}
+.about-dropdown:hover{
+	display: inline-block;
+}
+.about-dropdown{
+	display: none;	
+	position: absolute;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	left: 10%;
+	top: 90%;
+	text-align: left;
+	padding: 10px;
+}
+.about-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.about-dropdown a:hover{
+	color: #d21701;
+}
+.about-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+#services-hover{
+	position: relative;
+}
+#services-hover:hover + .services-dropdown{
+	display: inline-block;
+}
+.services-dropdown:hover{
+	display: inline-block;
+}
+.services-dropdown{
+	display: none;	
+	position: absolute;
+	left: 10%;
+	top: 90%;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	text-align: left;
+	padding: 10px;
+}
+.services-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.services-dropdown a:hover{
+	color: #d21701;
+}
+.service-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+
+
+
+
+
+
+/* FAQ */
+.fancy-filler{
+	height: 13%;
+	background-color: #800000;
+	outline: 3px solid white;
+	outline-offset: -10px;
+	position: relative;
+}
+.faq-title{
+	position: relative;
+	top: 2%;
+	left: 3%;
+	font-size: 60;
+	color: white;
+	font-family: sans-serif;
+}	
+	p{
+		font-size: 25;
+		font-family: sans-serif;
+		padding: 20px;
+	}
+	.faq-container{
+		width: 75%;
+		margin: auto;
+	}
+	.faq-item{
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		overflow: hidden;
+		background: #fff;
+		margin-bottom: 20px;
+	}
+	.faq-item label {
+      display: block;
+      padding: 15px;
+      background-color: #ddd;
+      cursor: pointer;
+      font-weight: bold;
+	  font-family: sans-serif;
+	  font-size: 18;
+    }
+
+    .faq-item input {
+      display: none;
+    }
+
+    .faq-item .content {
+      display: none;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
+	  font-family: sans-serif;
+	  font-size: 18;
+    }
+
+    .faq-item input:checked + label + .content {
+      display: block;
+    }
+</style>
+	</head>
+<body>
+
+<!-- navbar at the top of the website -->
+<div class="top-navbar">
+	<a class="navbar-link-img" href="https://reece-brogden.com/EnhancedHomes/#"><img class="home-button" src="/EnhancedHomes/SiteImages/Logo.png"></a>
+	<div class="service-div">
+		<a class="navbar-link" id="services-hover" href="https://reece-brogden.com/EnhancedHomes/#services">SERVICES&#8675;</a>
+		<div class="services-dropdown">
+			</br>
+			<a href="/EnhancedHomes/CustomHomes">Custom Homes</a>
+			</br></br>
+			<a href="/EnhancedHomes/Renovations">Renovation Additions</a>
+			</br></br>
+		</div>
+	</div>
+<a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Gallery">PORTFOLIO</a>
+<a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Homes-For-Sale">HOMES FOR SALE</a>
+<div class="about-div">
+	<a class="navbar-link" id="about-hover" href="https://reece-brogden.com/EnhancedHomes/About">ABOUT US&#8675;</a>
+	<div class="about-dropdown">
+		</br>
+		<a href="/EnhancedHomes/About">Meet the Owner</a>
+		</br></br>
+		<a href="/EnhancedHomes/FAQ">FAQ</a>
+		</br></br>
+	</div>
+</div>
+<a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/#contact-us">CONTACT US</a>
+</div>
+	<!-- Filler -->
+	<div style="height: 6%;"></div>
+
+
+	<!-- ABOUT -->
+	<div class="fancy-filler">
+		<p class="faq-title">FAQ</p>
+	</div>
+
+	<!-- Filler -->
+	<div style="height: 20px;"></div>
+	
+	<div class="faq-container">
+		<div class="faq-item">
+			<input type="checkbox" id="faq1">
+			<label for="faq1">How do I choose a custom home builder?</label>
+			<div class="content">
+				Research local builders with experience in your desired style and ask for referrals
+				from friends or real estate agents. Review their portfolio, interview them to understand their process
+				and pricing, and ensure they align with your vision and budget. Prioritize builders with a strong reputation
+				for quality craftsmanship and expertise in executing complex designs.
+			</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq2">
+			<label for="faq2">Is your company licensed, insured, and experienced?</label>
+			<div class="content">Yes, we are fully bonded, with Class A - BLD (the highest contractor license), and we have liability and workers comp insurance.</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq3">
+			<label for="faq3">Do you offer guarantees on your work?</label>
+			<div class="content">Yes, we offer a 1-year bumper-to-bumper guarantee and a 5-year structural guarantee.</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq4">
+			<label for="faq4">Can I see examples of homes you have built or speak to previous clients?</label>
+			<div class="content">You can view our <a href="/EnhancedHomes/Gallery" style="text-decoration: none;"><b>portfolio</b></a> on the website.</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq5">
+			<label for="faq5">Do you build on my lot or help me find one?</label>
+			<div class="content">We offer both options: building on your lot or helping you find one.</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq6">
+			<label for="faq6">Do you have in-house designers and architects?</label>
+			<div class="content">Yes, we have two in-house designers and collaborate with two architects and two site engineers.</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq7">
+			<label for="faq7">How long does it typically take to build a custom home?</label>
+			<div class="content">The actual build process takes about 7 months. After that, it typically takes 4-6 weeks for the certificate of occupancy, not including permitting or planning time.</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq8">
+			<label for="faq8">What factors affect the cost of a custom home?</label>
+			<div class="content">
+				The cost depends on several factors, including house size, location, design complexity,
+				land characteristics, chosen materials, finishes, desired features, local labor costs, and the overall design plan.
+			</div>
+		</div>
+		<div class="faq-item">
+			<input type="checkbox" id="faq9">
+			<label for="faq9">How do I choose materials, colors, and finishes for my custom home?</label>
+			<div class="content">You will work with our in-house designers for selections. For the foundation and house layout, our architect will work with you directly.</div>
+		</div>
+	</div>
+</body>
+</html>

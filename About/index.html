@@ -1,0 +1,215 @@
+
+<style>
+
+html {
+    scroll-behavior: smooth;
+	}
+@font-face{
+		font-family: Galvanizer;
+		src: url(./fonts/Galvanizer-Regular.tff) format('tff');
+	}
+p{
+    font-family: Galvanizer, sans-serif;
+    
+}
+a{
+	font-family: Galvanizer, sans-serif;
+}
+
+
+/* NAV BAR CSS */
+.top-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 13%;
+    border-bottom: 1px black solid;
+    z-index: 200;
+	display: inline;
+}
+.home-button{
+    width: 30%;
+}
+.navbar-link{
+    margin: 2%;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+}
+.navbar-link:hover{
+    color: #d21701;
+}
+.navbar-link-img{
+    vertical-align: middle;
+}
+#about-hover{
+	position: relative;
+}
+#about-hover:hover + .about-dropdown{
+	display: inline-block;
+}
+.about-dropdown:hover{
+	display: inline-block;
+}
+.about-dropdown{
+	display: none;	
+	position: absolute;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	left: 10%;
+	top: 90%;
+	text-align: left;
+	padding: 10px;
+}
+.about-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.about-dropdown a:hover{
+	color: #d21701;
+}
+.about-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+#services-hover{
+	position: relative;
+}
+#services-hover:hover + .services-dropdown{
+	display: inline-block;
+}
+.services-dropdown:hover{
+	display: inline-block;
+}
+.services-dropdown{
+	display: none;	
+	position: absolute;
+	left: 10%;
+	top: 90%;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	text-align: left;
+	padding: 10px;
+}
+.services-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.services-dropdown a:hover{
+	color: #d21701;
+}
+.service-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+
+
+
+
+
+
+/* ABOUT */
+.fancy-filler{
+	height: 13%;
+	background-color: #800000;
+	outline: 3px solid white;
+	outline-offset: -10px;
+	position: relative;
+}
+.about-title{
+	position: relative;
+	top: 20%;
+	left: 3%;
+	font-size: 60;
+	color: white;
+	font-family: sans-serif;
+	
+}
+.fubini-fam{
+	text-align: center;
+}
+.fubini-fam img{
+	width: 40%;
+}
+.about-paragraph{
+	padding-left: 18%;
+	padding-right: 18%;
+	padding-top: 2%;
+	font-size: 18;
+	line-height: 1.5;
+	font-family: serif;
+}
+</style>
+
+
+
+<body>
+
+    <div class="top-navbar">
+        <a class="navbar-link-img" href="https://reece-brogden.com/EnhancedHomes/#"><img class="home-button" src="/EnhancedHomes/SiteImages/Logo.png"></a>
+        <div class="service-div">
+            <a class="navbar-link" id="services-hover" href="https://reece-brogden.com/EnhancedHomes/#services">SERVICES&#8675;</a>
+            <div class="services-dropdown">
+                </br>
+                <a href="/EnhancedHomes/CustomHomes">Custom Homes</a>
+                </br></br>
+                <a href="/EnhancedHomes/Renovations">Renovation Additions</a>
+                </br></br>
+            </div>
+        </div>
+    <a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Gallery">PORTFOLIO</a>
+    <a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Homes-For-Sale">HOMES FOR SALE</a>
+    <div class="about-div">
+        <a class="navbar-link" id="about-hover" href="https://reece-brogden.com/EnhancedHomes/About">ABOUT US&#8675;</a>
+        <div class="about-dropdown">
+            </br>
+            <a href="/EnhancedHomes/About">Meet the Owner</a>
+            </br></br>
+            <a href="/EnhancedHomes/FAQ">FAQ</a>
+            </br></br>
+        </div>
+    </div>
+    <a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/#contact-us">CONTACT US</a>
+</div>
+
+	<!-- Filler -->
+	<div style="height: 6%;"></div>
+
+
+	<!-- ABOUT -->
+	<div class="fancy-filler">
+		<p class="about-title">ABOUT</p>
+	</div>
+
+	<!-- Filler -->
+	<div style="height: 20px;"></div>
+
+	<div class="fubini-fam">
+		<img src="/EnhancedHomes/placeholder-fam.png" style="width: 40%; height: 60%;"></img>
+
+	</div>
+	<div class="about-paragraph">
+		<p>Meet Ryan Fubini Owner of Enhanced Homes LLC </br></br>
+
+At Enhanced Homes LLC, we take pride in creating custom homes that not only meet but exceed expectations. With roots firmly planted in Arlington, VA, this community is not just where I built my business-it is where I grew up, raised my family, and continue to give back every day. Building homes here means more than just construction; it is about crafting spaces for my neighbors and being an active part of a community I deeply care about.
+</br></br>
+From the very beginning, I have prioritized a hands-on, personalized approach to every project. Unlike companies that hand off jobs to endless subcontractors, my team and I stay deeply involved from start to finish. Our work is built on trust, transparency, and a commitment to delivering exceptional craftsmanship. With every project, we ensure our clients feel confident, informed, and excited as their vision comes to life.
+</br></br>
+Over the years, technology has transformed the way we work. Tools like scheduling software and workflow management have allowed us to stay organized and take on larger projects without sacrificing our boutique approach. While our methods have evolved, our dedication to personal connections and hands-on service remains the same. Every detail, from planning to the final walkthrough, is tailored to ensure the highest quality and client satisfaction.
+</br></br>
+At Enhanced Homes LLC, we design and build custom homes that stand the test of time. From concept to completion, we bring thoughtful craftsmanship and a deep passion for what we do. With a focus on clear communication, seamless processes, and impeccable results, we are here to make your vision a reality-because every home deserves to be extraordinary.
+		</p>
+	</div>
+</body>
+

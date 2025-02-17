@@ -1,0 +1,434 @@
+
+<!-- saved from url=(0040)https://reece-brogden.com/EnhancedHomes/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Enhanced Homes</title>
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+    html {
+    scroll-behavior: smooth;
+	}
+	@font-face{
+		font-family: Galvanizer;
+		src: url(./fonts/Galvanizer-Regular.tff) format('tff');
+	}
+p{
+    font-family: Galvanizer, sans-serif;
+    
+}
+a{
+	font-family: Galvanizer, sans-serif;
+}
+/* NAV BAR CSS */
+.top-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 13%;
+    border-bottom: 1px black solid;
+    z-index: 200;
+	display: inline;
+}
+.home-button{
+    width: 30%;
+}
+.navbar-link{
+    margin: 2%;  
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+}
+.navbar-link:hover{
+    color: #d21701;
+}
+.navbar-link-img{
+    vertical-align: middle;
+}
+#about-hover{
+	position: relative;
+}
+#about-hover:hover + .about-dropdown{
+	display: inline-block;
+}
+.about-dropdown:hover{
+	display: inline-block;
+}
+.about-dropdown{
+	display: none;	
+	position: absolute;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	left: 10%;
+	top: 90%;
+	text-align: left;
+	padding: 10px;
+}
+.about-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.about-dropdown a:hover{
+	color: #d21701;
+}
+.about-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+#services-hover{
+	position: relative;
+}
+#services-hover:hover + .services-dropdown{
+	display: inline-block;
+    
+}
+.services-dropdown:hover{
+	display: inline-block;
+}
+.services-dropdown{
+	display: none;	
+	position: absolute;
+	left: 10%;
+	top: 90%;
+	z-index: 150;
+	background-color: white;
+	/* outline: 1px solid black; */
+	border-radius: 2px;
+	text-align: left;
+	padding: 10px;
+}
+.services-dropdown a{
+	text-decoration: none;
+	color: black;
+}
+.services-dropdown a:hover{
+	color: #d21701;
+}
+.service-div{
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	display: inline;
+}
+
+
+
+
+
+
+
+/* TOP IMAGES */
+.top-level-images{
+    padding-left: 1%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+
+
+
+/* GALLERY/PORTFOLIO */
+.gallery-text{
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+	transform: translateX(-50%);
+    z-index: 10;
+}
+.gallery-text p{
+    letter-spacing: 5px;
+    color: white;
+}
+.gallery-text a{
+    text-decoration: none;
+}
+
+
+/* HOMES FOR SALE */
+.HFS-text{
+    text-align: center;
+    position: absolute;
+	top: 0%; 
+    left: 50%;
+	transform: translateX(-50%);
+    z-index: 10;
+}
+.HFS-text p{
+    letter-spacing: 5px;
+    color: white;
+}
+.HFS-text a{
+    text-decoration: none;
+}
+
+
+
+
+/* SERVICES SECTION */
+.services-div{
+    display: flex;
+    flex-direction: row;
+}
+.services-div div{
+    width: 50%;
+}
+.services-title{
+	font-size: 20;
+	letter-spacing: 5px;
+	color: #121212;
+}
+.custom-homes-text p{
+    letter-spacing: 5px;
+    color: white;
+}
+.custom-homes-text{
+    position: absolute;
+    text-align: center;
+    top: 40px;
+    left: 50%;
+	transform: translateX(-50%);
+    z-index: 10;
+}
+.renovations-text p{
+    letter-spacing: 5px;
+    color: white;
+}
+.renovations-text{
+    position: absolute;
+    text-align: center;
+    top: 40px;
+    left: 50%;
+	transform: translateX(-50%);
+    z-index: 10;
+}
+.services-about-text{
+    letter-spacing: 3px;
+    font-size: 30;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+
+
+/* CONTACT US and MAP */
+#contact-us{
+	text-align: center;
+}
+#map{
+	height: 350px;
+}
+.contact-us p{
+	color: #545454;
+	font-size: 25;
+}
+.bottom-bar{
+	background-color: #121212;
+	padding: 10px;
+	padding-left: 5%;
+}
+.bottom-bar p{
+	color: white;
+}
+
+</style>
+
+
+<body>
+
+    <!-- navbar at the top of the website -->
+    <div class="top-navbar">
+        <a class="navbar-link-img" href="https://reece-brogden.com/EnhancedHomes/#"><img class="home-button" src="./SiteImages/Logo.png"></a>
+        <div class="service-div">
+            <a class="navbar-link" id="services-hover" href="https://reece-brogden.com/EnhancedHomes/#services">SERVICES&#8675;</a>
+            <div class="services-dropdown">
+                </br>
+                <a href="/EnhancedHomes/CustomHomes">Custom Homes</a>
+                </br></br>
+                <a href="/EnhancedHomes/Renovations">Renovation Additions</a>
+                </br></br>
+            </div>
+        </div>
+    <a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Gallery">PORTFOLIO</a>
+    <a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/Homes-For-Sale">HOMES FOR SALE</a>
+    <div class="about-div">
+        <a class="navbar-link" id="about-hover" href="https://reece-brogden.com/EnhancedHomes/About">ABOUT US&#8675;</a>
+        <div class="about-dropdown">
+            </br>
+            <a href="/EnhancedHomes/About">Meet the Owner</a>
+            </br></br>
+            <a href="/EnhancedHomes/FAQ">FAQ</a>
+            </br></br>
+        </div>
+    </div>
+    <a class="navbar-link" href="https://reece-brogden.com/EnhancedHomes/#contact-us">CONTACT US</a>
+</div>
+
+
+    <!-- Front page images -->
+    <div class="top-level-images">
+        <div class="house1" style="display:flex; flex-direction:row;">
+            <div style="width: 65%; display: flex;">
+                <img src="./SiteImages/FrontPageImages/house1.jpg" style="width: 100%;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 20px; width: 35%; margin-left: 50px;">
+                <img src="./SiteImages/FrontPageImages/House12.jpg" style="width: 100%;">
+                <img src="./SiteImages/FrontPageImages/House13.jpg" style="width: 100%;">
+            </div>
+        </div>
+        <div class="house2" style="display:flex; flex-direction:row; margin-top: 30px">
+            <div style="display: flex; flex-direction: column; gap: 20px; width: 35%;">
+                <img src="./SiteImages/FrontPageImages/House22.jpg" style="width: 100%;">
+                <img src="./SiteImages/FrontPageImages/House23.jpg" style="width: 100%;">
+            </div>
+            <div style="width: 65%; display: flex; margin-left: 50px;">
+                <img src="./SiteImages/FrontPageImages/house2.jpg" style="width: 100%;">
+            </div>
+        </div>
+        <!-- <div class="house3" style="display:flex; flex-direction:row; margin-top: 30px;">
+            <div style="width: 60%; display: flex;">
+                <img src="./SiteImages/FrontPageImages/House3.jpg" style="width: 100%;"/>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 20px; width: 30%; margin-left: 50px;">
+                <img src="./SiteImages/FrontPageImages/House32.jpg" style="width: 100%;"/>
+                <img src="./SiteImages/FrontPageImages/House33.jpg" style="width: 100%;"/>
+            </div>
+        </div> -->
+    </div>
+
+
+
+
+    <!-- filler -->
+    <div style="height: 200px;"></div>
+
+
+
+
+
+    <!-- Gallery link-->
+    <div class="gallery-link" style="overflow: hidden; position: relative; height: 500px;">
+        <img src="./SiteImages/FrontPageImages/gallery-img-grayed.jpg" 
+             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+        <div class="gallery-text" style="position: relative; z-index: 2; text-align: center;">
+            <p style="font-size: 5vw;">PORTFOLIO</p>
+            <a href="https://reece-brogden.com/EnhancedHomes/Gallery">
+                <p style="font-size: 2vw; border: white solid 5px; border-radius: 10px; 
+                          font-family: serif; display: inline-block; padding: 10px 20px; ">
+                    VIEW PORTFOLIO
+                </p>
+            </a>
+        </div>
+    </div>
+    
+    
+    
+ <!-- filler -->
+ <div  id="services" style="height: 200px;"></div>
+
+
+
+    <!-- SERVICES SECTION -->
+	<div style="text-align: center;">
+		<p class="services-title">OUR SERVICES</p>
+	</div>
+
+	 <!-- filler -->
+	<div style="height: 50px;"></div>
+
+    <div class="services-div">
+        <div class="custom-homes" style="position: relative;">
+            <img src="./SiteImages/FrontPageImages/CustomHomesO.jpg" style="width: 98%; margin-left: 10px;">
+            <div class="custom-homes-text">
+                <p style="font-size: 4vw;">CUSTOM HOMES</p>
+                <a href="https://reece-brogden.com/EnhancedHomes/CustomHomes" style="text-decoration: none;"><p style="font-size: 2vw; border: white solid 5px; border-radius: 10px; font-family: serif;">LEARN MORE</p></a>
+            </div>
+        </div>
+        <div class="renovation-additions" style="position: relative;">
+            <img src="./SiteImages/FrontPageImages/RenovationsO.jpg" style="width: 98%; margin-left: 10px;">
+            <div class="renovations-text">
+                <p style="font-size: 4vw; text-align:center;">RENOVATIONS ADDITIONS</p>
+                <a href="https://reece-brogden.com/EnhancedHomes/Renovations" style="text-decoration: none;"><p style="font-size: 2vw; border: white solid 5px; border-radius: 10px; font-family: serif;">LEARN MORE</p></a>
+            </div>
+        </div>
+    </div>   
+    <!-- filler -->
+    <div style="height: 25px;"></div>
+    <div>
+        <p class="services-about-text">ENHANCED HOMES LLC IS A FULL SCALE CONSTRUCTION FIRM SPECIALIZING IN BUILDING
+            CUSTOM HOMES FROM THE GROUND UP, PROUDLY SERVING NORTHERN VIRGINA.
+        </p>
+    </div>  
+
+
+
+
+    <!-- filler -->
+    <div style="height: 200px;"></div>
+
+
+	<!-- HOMES FOR SALE -->
+	<div class="gallery-link" style="overflow: hidden; position: relative; height: 500px;">
+        <img src="./SiteImages/FrontPageImages/gallery-img-grayed.jpg" 
+             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+        <div class="gallery-text" style="position: relative; z-index: 2; text-align: center;">
+            <p style="font-size: 5vw;">HOMES FOR SALE</p>
+            <a href="https://reece-brogden.com/EnhancedHomes/Homes-For-Sale">
+                <p style="font-size: 2vw; border: white solid 5px; border-radius: 10px; 
+                          font-family: serif; display: inline-block; padding: 10px 20px; ">
+                    VIEW AVALIBLE HOMES
+                </p>
+            </a>
+        </div>
+    </div>
+
+	<!-- filler -->
+    <div style="height: 100px;"></div>
+
+
+
+	<!-- CONTACT US and MAP -->
+	<div class="map" id="map" style="text-align: center; background-color: #fffbed">
+		<br>
+
+		<script>
+			// Generate a map in the div with id=map
+			var map = L.map('map').setView([38.849916, -77.084627],18); // [coords], zoom
+			
+			var marker = L.marker([38.849916, -77.084627]).addTo(map);
+			var OpenStreetMap_DE = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+			    maxZoom: 18,
+			    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		   	 }).addTo(map);	
+		</script>
+		<p>2205 SHIRLINGTON RD, ARLINGTON, VA 22206</p><br>
+	</div>
+	<!-- filler -->
+	<div style="height: 25px;"></div>
+
+	<div id="contact-us" style="text-align: center;">
+		<p><u>CONTACT OUR OFFICE</u></p>
+		<p>(571)573-9000  &nbsp; info@enhanced-homes.com</p>
+		<p><u>CONTACT OUR REALTOR</u></p>
+		<p>Aaron Probasco</p>
+		<p>(703)946-4652  &nbsp; aaron@enhanced-homes.com</p>
+	</div>
+
+	<div class="bottom-bar">
+		<p id="bottom-rights-text" style="padding-right: 10%;"></p>
+        <script>
+            let text = document.getElementById("bottom-rights-text");
+            let date = new Date();
+            text.innerHTML = date.getFullYear() + " &#169; All rights reserved. Enhanced Homes.";
+        </script>
+	</div>
+
